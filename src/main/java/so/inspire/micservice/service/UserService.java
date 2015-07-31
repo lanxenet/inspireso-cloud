@@ -23,7 +23,6 @@ public class UserService extends BusinessService {
         this.userRepository = userRepository;
     }
 
-
     public User find(String id) {
         return this.userRepository.findOne(id);
     }
