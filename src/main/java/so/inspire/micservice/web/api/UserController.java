@@ -2,7 +2,7 @@
  * Copyright (c) 2015, Inspire.so and/or its affiliates. All rights reserved.
  */
 
-package so.inspire.springboot.web.api;
+package so.inspire.micservice.web.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,8 +11,8 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import so.inspire.springboot.domain.User;
-import so.inspire.springboot.service.UserService;
+import so.inspire.micservice.domain.User;
+import so.inspire.micservice.service.UserService;
 
 /**
  * Created by Inspireso Tream

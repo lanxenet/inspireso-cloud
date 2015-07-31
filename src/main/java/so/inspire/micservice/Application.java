@@ -2,7 +2,7 @@
  * Copyright (c) 2015. Sunisco and/or its affiliates.
  */
 
-package so.inspire.springboot;
+package so.inspire.micservice;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

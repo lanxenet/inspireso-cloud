@@ -2,7 +2,7 @@
  * Copyright (c) 2015, Inspire.so and/or its affiliates. All rights reserved.
  */
 
-package so.inspire.springboot.web.api;
+package so.inspire.micservice.web.api;
 
 import org.springframework.web.bind.annotation.*;
 

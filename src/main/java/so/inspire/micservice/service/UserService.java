@@ -1,4 +1,4 @@
-package so.inspire.springboot.service;
+package so.inspire.micservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -6,10 +6,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.inspireso.framework.service.BusinessService;
-import com.sun.webkit.PageCache;
 
-import so.inspire.springboot.domain.User;
-import so.inspire.springboot.repository.UserRepository;
+import so.inspire.micservice.domain.User;
+import so.inspire.micservice.repository.UserRepository;
 
 /**
  * Created by Inspireso Tream

@@ -2,7 +2,7 @@ import java.io.IOException;
 
 import com.google.common.base.Optional;
 
-import so.inspire.springboot.domain.User;
+import so.inspire.micservice.domain.User;
 import so.inspireso.remoting.client.RemotingClient;
 
 /**

@@ -1,6 +1,5 @@
 import java.io.IOException;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,7 +7,7 @@ import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableMap;
 import com.inspireso.framework.util.Serializing;
 
-import so.inspire.springboot.domain.User;
+import so.inspire.micservice.domain.User;
 import so.inspireso.remoting.http.HttpSender;
 
 /**

@@ -1,4 +1,4 @@
-package so.inspire.springboot.domain;
+package so.inspire.micservice.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
