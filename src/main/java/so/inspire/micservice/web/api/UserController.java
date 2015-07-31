@@ -48,7 +48,7 @@ public class UserController {
     // /user?code=xxx
     @RequestMapping(
             method = RequestMethod.GET,
-            value = "/userall"
+            value = "/all"
     )
     @ResponseStatus(HttpStatus.OK)
     public Page<User> findAll(
@@ -79,10 +79,10 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     public User create(
             @RequestBody User user) {
-//        User u = this.userService.findByCode(user.getCode());
-//        if (u != null) {
-//            return u;
-//        }
+        User u = this.userService.findByCode(user.getCode());
+        if (u != null) {
+            return u;
+        }
         return this.userService.saveOrUpdate(user);
     }
 
