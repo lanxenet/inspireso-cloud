@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Map;
 
 import com.google.common.base.Optional;
 
@@ -8,9 +9,14 @@ import so.inspireso.remoting.client.RemotingClient;
 /**
  * Created by Inspireso Tream
  */
-public class RemotUerClient extends RemotingClient {
-    protected RemotUerClient(String address) {
+public class RemoteUserClient extends RemotingClient {
+    protected RemoteUserClient(String address) {
         super(address);
+    }
+
+    public Optional<Map> emptyMap() throws IOException {
+        return super.execute(Map.class, httpGet(), "test/emptymap");
+
     }
 
     public Optional<User> get(String code) throws IOException {

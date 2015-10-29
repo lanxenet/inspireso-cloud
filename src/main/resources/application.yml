@@ -7,34 +7,37 @@
 #spring.config.location=classpath*:/conf/context/**/*-context.xml
 
 # Server settings (ServerProperties)
-server.port=1000
-server.address=0.0.0.0
-server.sessionTimeout=30
-server.contextPath=
+server:
+  port: 1000
+  address: 0.0.0.0
+  sessionTimeout: 30
+#  contextPath: /
 
 # Tomcat specifics
-server.tomcat.accessLogEnabled=false
+  tomcat.accessLogEnabled: false
 #server.tomcat.protocolHeader=x-forwarded-proto
 #server.tomcat.remoteIpHeader=x-forwarded-for
-server.tomcat.backgroundProcessorDelay=30
-server.tomcat.uri-encoding=UTF-8
+  tomcat.backgroundProcessorDelay: 30
+  tomcat.uri-encoding: UTF-8
 
 #spring.resources.add-mappings=true
 
-spring.http.encoding.enabled=true
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.url=jdbc:h2:~/demo
-spring.datasource.username=demo
-spring.datasource.password=
+spring:
+  http.encoding.enabled: true
+  datasource:
+    driverClassName: org.h2.Driver
+    datasource.url: jdbc:h2:~/demo
+    datasource.username: demo
+    datasource.password:
 
 #"none", "validate", "update", "create", "create-drop"
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.database=H2
-spring.jpa.showsql=true
+  jpa.hibernate.ddl-auto: update
+  jpa.database: H2
+  jpa.showsql: true
 
-spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
-spring.jackson.joda-date-time-format=yyyy-MM-dd HH:mm:ss
-spring.jackson.serialization.INDENT_OUTPUT=true
+  jackson.date-format: yyyy-MM-dd HH:mm:ss
+  jackson.joda-date-time-format: yyyy-MM-dd HH:mm:ss
+  jackson.serialization.INDENT_OUTPUT: true
 
 #security.enableCsrf=true
 #security.basic.enabled=false

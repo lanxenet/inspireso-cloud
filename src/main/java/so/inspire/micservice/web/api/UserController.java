@@ -4,12 +4,16 @@
 
 package so.inspire.micservice.web.api;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import com.google.common.collect.Maps;
 
 import so.inspire.micservice.domain.User;
 import so.inspire.micservice.service.UserService;
@@ -32,6 +36,16 @@ public class UserController {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public String handleException(Exception e) {
         return e.getMessage();
+    }
+
+    // /user/id
+    @RequestMapping(
+            method = RequestMethod.GET,
+            value = "/test/emptymap"
+    )
+    @ResponseStatus(HttpStatus.OK)
+    public Map<String, String> testEmptyMap() {
+        return Maps.newHashMap();
     }
 
     // /user/id
