@@ -1,4 +1,4 @@
-package so.inspire.micservice.api;
+package org.inspireso.cloud.api;
 
 import java.io.IOException;
 
