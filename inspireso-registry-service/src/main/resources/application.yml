@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+
+eureka:
+  instance:
+      hostname: a
+      leaseRenewalIntervalInSeconds: 3
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://b:8762/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    peer-eureka-nodes-update-interval-ms: 1000
+    peer-eureka-status-refresh-time-interval-ms: 100
+
