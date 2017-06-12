@@ -1,6 +1,11 @@
 FROM inspireso/java:8-jre-alpine
-VOLUME /tmp
-ADD app /app
-RUN sh -c 'touch /app.jar'
-EXPOSE 8761
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/bootstrap.jar"]
+
+MAINTAINER lan.xinen "<lan.xinen@inspireso.org>"
+
+COPY app /app
+COPY run.sh /run.sh
+
+RUN chmod +x /run.sh \
+  && dos2unix -u /run.sh
+
+CMD ["sh", "run.sh"]
