@@ -1,6 +1,6 @@
 #!/bin/sh
 
-RESERVED_MEGABYTES=64
+RESERVED_MEGABYTES=128
 limit_in_bytes=$(cat /sys/fs/cgroup/memory/memory.limit_in_bytes)
 
 # If not default limit_in_bytes in cgroup
@@ -14,6 +14,8 @@ fi
 
 cd /app
 
+export JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=file:/dev/urandom -Duser.timezone=GMT+08"
+
 echo "Starting App"
 
-exec java $JAVA_OPTS -jar /app/bootstrap.jar
+exec java $JAVA_OPTS -jar /app/bootstrap.jar "$@"

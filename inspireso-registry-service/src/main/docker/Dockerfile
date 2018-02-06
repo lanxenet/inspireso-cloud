@@ -8,4 +8,4 @@ COPY run.sh /run.sh
 RUN chmod +x /run.sh \
   && dos2unix -u /run.sh
 
-CMD ["sh", "run.sh"]
+ENTRYPOINT ["sh", "/run.sh"]
